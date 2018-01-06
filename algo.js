@@ -18,6 +18,11 @@ function go(){
 
 
 }
+function CRT(){
+}
+function Test(){
+    alert("it works");
+}
 function Dio(){
     var a=document.getElementById("equation").innerHTML;
     var a1=a.split("=");
@@ -98,4 +103,13 @@ var formulas = [];
         else{
         return b;
         }
+    }
+    class f{
+        constructor(a,b,c,d){
+            this.a =a;
+            this.b=b;
+            this.c=c;
+            this.d=d;
+        }
+        
     }
