@@ -47,8 +47,8 @@ function LC(){
 function CRT(){
     var a=document.getElementById("formula1").innerHTML;
     var b=document.getElementById("formula2").innerHTML;
-    var a1 =a.split("mod ");
-    var b1 =b.split("mod ");
+    var a1 =a.split("mod");
+    var b1 =b.split("mod");
     var c=parseInt(a1[1].substring(0,a1[1].length-1));
     var d=parseInt(b1[1].substring(0,b1[1].length-1));
     var c1=parseInt(a1[0].substring(0,a1[0].length-1));
