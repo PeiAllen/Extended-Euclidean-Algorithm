@@ -37,6 +37,9 @@ function LC(){
             a=a.concat(" "+i+",");
         }
     }
+    if(n==1){
+    a=a.concat(" 1,");
+    }
     a=a.substring(1,a.length-1);
     document.getElementById("solution2").innerHTML=(a);    
 }
