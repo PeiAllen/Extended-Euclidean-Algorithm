@@ -8,10 +8,8 @@
         <pre><h3> First Number:        Second Number:</h3></pre>
   <input type="text" name="first" id="first" style="text-align:center; border: solid 1px gray;">      <input type="text" name="second" id="second" style="text-align:center; border: solid 1px gray;"><br>
          <input id="button" type="button" name="button" onclick="go()" value="Enter"/>
-
-</form></center>
-    <center><h1>GCF</h1>
-        <span contenteditable="true" name="GCF" id="GCF" style="border: solid 1px gray; text-align:center; display:inline-block; min-width:100px;"></span>
+</form>
+      s  <span contenteditable="true" name="GCF" id="GCF" style="border: solid 1px gray; text-align:center; display:inline-block; min-width:100px;"></span>
 </center>
     <center><h1>Diophantine Equations</h1>
     <span contenteditable="true" name="equation" id="equation" onkeyup="Test(); return false" style="border: solid 1px gray; text-align:center; display:inline-block; min-width:100px;"></span><br>
@@ -20,6 +18,15 @@
         </center>
     <center>
     <h1>Chinese Remainder Theorem</h1>
-        
+        <span>Formula 1: X≡</span><span contenteditable="true" name="formula1" id="formula1" onkeyup="Test(); return false" style="border: solid 1px gray; text-align:center; display:inline-block; min-width:100px;"></span><br>
+        <span>Formula 2: X≡</span><span contenteditable="true" name="formula2" id="formula2" onkeyup="Test(); return false" style="border: solid 1px gray; text-align:center; display:inline-block; min-width:100px;"></span><br>
+        <input id="button3" type="button" name="button3" onclick="CRT()" value="Enter"/><br>
+        <span contenteditable="true" name="solution1" id="solution1" style="border: solid 1px gray; text-align:center; display:inline-block; min-width:100px;"></span>
+    </center>
+    <center>
+        <h1>Linear Congruences</h1>
+        <span>AX≡1(mod </span><span contenteditable="true" name="n#" id="n#" onkeyup="Test(); return false" style="border: solid 1px gray; text-align:center; display:inline-block; min-width:10px;"></span><span>)</span><br>
+        <input id="button4" type="button" name="button4" onclick="LC()" value="Enter"/><br>
+        <span contenteditable="true" name="solution2" id="solution2" onkeyup="Test(); return false" style="border: solid 1px gray; text-align:center; display:inline-block; min-width:100px;"></span>
     </center>
 </body>

@@ -18,10 +18,60 @@ function go(){
 
 
 }
+
+function LC(){
+ var n =parseInt(document.getElementById("n#").innerHTML);
+    var temp1=new Array(n+1);
+    for(var i =2;i<=Math.ceil(n/2);i++){
+        if(!temp1[i]){
+            if(n%i==0){
+                for(var j=1;j<=Math.floor(n/i);j++){
+                    temp1[j*i]=true;
+                }
+            }
+        }
+    }
+    var a="";
+    for(var i=1;i<n;i++){
+        if(!temp1[i]){
+            a=a.concat(" "+i+",");
+        }
+    }
+    a=a.substring(1,a.length-1);
+    document.getElementById("solution2").innerHTML=(a);    
+}
+
 function CRT(){
+    var a=document.getElementById("formula1").innerHTML;
+    var b=document.getElementById("formula2").innerHTML;
+    var a1 =a.split("mod ");
+    var b1 =b.split("mod ");
+    var c=parseInt(a1[1].substring(0,a1[1].length-1));
+    var d=parseInt(b1[1].substring(0,b1[1].length-1));
+    var c1=parseInt(a1[0].substring(0,a1[0].length-1));
+    var d1=parseInt(b1[0].substring(0,b1[0].length-1));
+    var temp1=new Array(4);
+    var change=false;
+        if(d>c){
+        temp1 =Euclidean(c,d);
+        }
+        else{
+        temp1 =Euclidean(d,c);
+            change=true;
+        }
+    var p;
+    if(change){
+    p=temp1[0]*temp1[1]*d1+temp1[2]*temp1[3]*c1; 
+    }
+    else{
+    p=temp1[0]*temp1[1]*c1+temp1[2]*temp1[3]*d1;
+    }
+    var l=c*d;
+    document.getElementById("solution1").innerHTML=("X≡"+p+"(mod "+l+")");
+    
 }
 function Test(){
-    alert("it works");
+    
 }
 function Dio(){
     var a=document.getElementById("equation").innerHTML;
@@ -79,7 +129,7 @@ var formulas = [];
     formulas.pop();
     var temp = formulas.pop();
     gcf=temp[3];
-    return Extended(new Array(1,temp[0],-temp[2],temp[1]));
+    return Extended(new Array(1,temp[0],-temp[1],temp[2]));
     }
     else{
     return Euclidean(b,d);
